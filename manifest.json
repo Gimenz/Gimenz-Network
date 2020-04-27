@@ -1,0 +1,45 @@
+{
+  "name": "Gimenz Network",
+  "short_name": "Gimenz Network",
+  "start_url": "https://www.masgimenz.com",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "description": "Blog yang membahas tentang Kumpulan Tutorial, Android, Download Aplikasi dan Game Android, Desain Grafis, Tutorial Blog, dan lain - lain seputar Teknologi",
+  "icons": [{
+    "src": "https://1.bp.blogspot.com/-5eXvFEEubSs/XqdmmPXCUJI/AAAAAAAADgg/naNpMy1OVIMWl8ra58TmNvQjGVLDNKHPgCLcBGAsYHQ/s1600/36.png",
+    "sizes": "36x36",
+    "type": "image/png",
+    "density": "0.75"
+  }, {
+    "src": "https://1.bp.blogspot.com/-C__yrBWLOk8/XqdmxBSypQI/AAAAAAAADgk/AoivM_9rDa0jH46qFrXxEdmmmJNMzCQpwCLcBGAsYHQ/s1600/48.png",
+    "sizes": "48x48",
+    "type": "image/png",
+    "density": "1.0"
+  }, {
+    "src": "https://1.bp.blogspot.com/-u7-DZHVOavc/Xqdm2Y-9z9I/AAAAAAAADgs/vJ8fXc-6tBkB_PXRIxEHFWSZp-7Siu-MQCLcBGAsYHQ/s1600/72.png",
+    "sizes": "72x72",
+    "type": "image/png",
+    "density": "1.5"
+  }, {
+    "src": "https://1.bp.blogspot.com/-Ed9r_VLI23U/Xqdm74sVi0I/AAAAAAAADgw/36AmIpjBKNcRYuNiGKDA58usT1N1rOkxACLcBGAsYHQ/s1600/96.png",
+    "sizes": "96x96",
+    "type": "image/png",
+    "density": "2.0"
+  }, {
+    "src": "https://1.bp.blogspot.com/-PNzXISBi2Ak/XqdnAACxgmI/AAAAAAAADg0/e0F6jJyXTpMyJM4YLXnkdf90tA1QSl19ACLcBGAsYHQ/s1600/144.png",
+    "sizes": "144x144",
+    "type": "image/png",
+    "density": "3.0"
+  }, {
+    "src": "https://1.bp.blogspot.com/-Wj5P34GBnn4/XqdnGNKxtNI/AAAAAAAADg4/P-Erc8z-rh8ceJUNdhJ73N-7h1f7TgRmQCLcBGAsYHQ/s1600/192.png",
+    "sizes": "192x192",
+    "type": "image/png",
+    "density": "4.0"
+  }, {
+    "src": "https://1.bp.blogspot.com/-yDYWuT21k-s/XqdnLELCSLI/AAAAAAAADg8/AwRoofTRhaUDrgAOtK2s58MSg0T8lFz_wCLcBGAsYHQ/s1600/512.png",
+    "sizes": "512x512",
+    "type": "image/png",
+    "density": "5.0"
+  }]
+}
