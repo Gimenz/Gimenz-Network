@@ -1,0 +1,124 @@
+<style>
+	.corona-alert {
+  padding: 5px;
+  background-color: #fff;
+  color: #3e3e3e;
+  transition: all .8s ease;
+}
+
+.corona-bg-primary {
+  background-color: #007bff!important;
+  padding: 5px;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+
+.corona-bg-success {
+  background-color: #28a745!important;
+  padding: 5px;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+
+.corona-bg-danger {
+  background-color: #dc3545!important;
+  padding: 5px;
+  border-radius: 6px;
+  margin-right: 5px;
+}
+
+.corona-label {
+  display: inline-flex;
+  color: #fff;
+  justify-content: center;
+  margin-bottom: .5rem;
+  font-family: 'Roboto',-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+  padding: 5px;
+  transition: .8s ease;
+  font-weight: 500;
+  font-size: .8rem;
+}
+</style>
+
+<script type="text/javascript">
+    var date = new Date();
+    var hari = date.getDay()
+    var tahun = date.getFullYear();
+    var bulan = date.getMonth();
+    var tanggal = date.getDate();
+    switch(hari) {
+  case 0: hari = "Ahad";
+  break;
+    case 1: hari = "Senin";
+  break;
+    case 2: hari = "Selasa";
+  break;
+    case 3: hari = "Rabu";
+  break;
+    case 4: hari = "Kamis";
+  break;
+    case 5: hari = "Jum'at";
+  break;
+    case 6: hari = "Sabtu";
+  break;
+}
+
+switch(bulan) {
+  case 0: bulan = "Januari";
+  break;
+     case 1: bulan = "Februari";
+  break;
+     case 2: bulan = "Maret";
+  break;
+     case 3: bulan = "April";
+  break;
+     case 4: bulan = "Mei";
+  break;
+     case 5: bulan = "Juni";
+  break;
+     case 6: bulan = "Juli";
+  break;
+     case 7: bulan = "Agustus";
+  break;
+     case 8: bulan = "September";
+  break;
+     case 9: bulan = "Oktober";
+  break;
+     case 10: bulan = "November";
+  break;
+     case 11: bulan = "Desember";
+  break;
+}
+
+var infoTanggal = hari + "," + tanggal + " " + bulan + " " + tahun;
+    
+    // Daftar API Lainnya
+    // https://covid19.mathdro.id/api/countries/ID
+    // https://api.kawalcorona.com/indonesia/
+    
+    let url = 'https://coronavirus-19-api.herokuapp.com/countries/Indonesia';
+    fetch(url)
+    .then(res => res.json())
+    .then((out) => {
+    document.getElementById("positif").innerHTML = 'Positif : ' + out.cases;
+    document.getElementById("positiftoday").innerHTML = 'Hari ini : ' + out.todayCases;
+    document.getElementById("positifaktif").innerHTML = 'Aktif : ' + out.active;
+    document.getElementById("meninggal").innerHTML = 'Meninggal : ' + out.deaths;
+    document.getElementById("meninggaltoday").innerHTML = 'Hari ini : ' + out.todayDeaths;
+    document.getElementById("sembuh").innerHTML = 'Sembuh : ' + out.recovered;
+})
+.catch(err => {
+  throw err;
+});
+    </script>
+
+<div class="corona-alert" style="text-align: center;">
+<strong id="corona-info">Informasi Covid-19 Indonesia <script type="text/javascript">document.write(infoTanggal);</script></strong>
+<br />
+    <label id="positif" class="corona-label corona-bg-primary"></label>
+    <label id="positiftoday" class="corona-label corona-bg-primary"></label>
+    <label id="positifaktif" class="corona-label corona-bg-primary"></label>
+    <label id="meninggal" class="corona-label corona-bg-danger"></label>
+    <label id="meninggaltoday" class="corona-label corona-bg-danger"></label>
+    <label id="sembuh" class="corona-label corona-bg-success"></label>
+</div>
